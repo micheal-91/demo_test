@@ -137,22 +137,22 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: online-boutique-ingress
-  namespace: online-boutique
   annotations:
-    kubernetes.io/ingress.class: "nginx"                  # Tells RKE2's / NGINX Ingress controller to handle this
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"     # Disables forced HTTPS redirect for easy local HTTP testing
+    argocd.argoproj.io/tracking-id: my-app:networking.k8s.io/Ingress:default/frontend-ingress
+    kubernetes.io/ingress.class: nginx
+  name: frontend-ingress
+  namespace: default
 spec:
   rules:
-  - http:                                                 # Catch-all rule (no specific host required)
+  - http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: frontend                                # Targets the Online Boutique frontend service
+            name: frontend
             port:
-              number: 80                                  # The port the frontend service listens on
+              number: 80
 ---
 apiVersion: v1
 kind: ServiceAccount
