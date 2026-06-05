@@ -44,7 +44,7 @@ spec:
               - ALL
           privileged: false
           readOnlyRootFilesystem: true
-        image: adservice
+          image: ghcr.io/micheal-91/adservice
         ports:
         - containerPort: 9555
         env:
