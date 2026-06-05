@@ -1,7 +1,7 @@
-apiVersion: skaffold/v4beta14
+apiVersion: skaffold/v4beta1
 kind: Config
 metadata:
-  name: new-repo
+  name: online-boutique
 build:
   local:
     push: true
@@ -53,7 +53,6 @@ build:
         dockerfile: Dockerfile
 manifests:
   rawYaml:
-    - ARGOCD/argocd-app.yaml
     - kubernetes-manifests/adservice.yaml
     - kubernetes-manifests/cartservice.yaml
     - kubernetes-manifests/checkoutservice.yaml
