@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default2
   source:
-    repoURL: "https://github.com/micheal-91/microservices-demo.git"
+    repoURL: "https://github.com/micheal-91/demo_test.git"
     targetRevision: HEAD
     path: .
     directory:
