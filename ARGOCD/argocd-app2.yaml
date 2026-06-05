@@ -4,7 +4,7 @@ metadata:
   name: online-boutique2
   namespace: argocd
 spec:
-  project: default2
+  project: default
   source:
     repoURL: "https://github.com/micheal-91/demo_test.git"
     targetRevision: HEAD
