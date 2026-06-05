@@ -4,7 +4,7 @@ metadata:
   name: online-boutique2
   namespace: argocd
 spec:
-  project: default
+  project: default2
   source:
     repoURL: "https://github.com/micheal-91/microservices-demo.git"
     targetRevision: HEAD
@@ -13,7 +13,7 @@ spec:
       include: '{test-hydrated-new.yaml}'
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: default
+    namespace: default2
   syncPolicy:
     automated:
       prune: true
