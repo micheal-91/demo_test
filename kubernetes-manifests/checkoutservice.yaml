@@ -35,6 +35,7 @@ spec:
         runAsUser: 1000
       containers:
         - name: server
+          image: ghcr.io/micheal-91/checkoutservice
           securityContext:
             allowPrivilegeEscalation: false
             capabilities:
