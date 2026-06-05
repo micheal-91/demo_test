@@ -39,7 +39,7 @@ spec:
         - env:
             - name: PORT
               value: "9555"
-          image: adservice
+          image: ghcr.io/micheal-91/adservice:sic-jss-529-gc46d98b0
           livenessProbe:
             grpc:
               port: 9555
@@ -114,7 +114,7 @@ spec:
         - env:
             - name: REDIS_ADDR
               value: redis-cart:6379
-          image: cartservice
+          image: ghcr.io/micheal-91/cartservice:sic-jss-529-gc46d98b0
           livenessProbe:
             grpc:
               port: 7070
@@ -269,7 +269,7 @@ spec:
               value: currencyservice:7000
             - name: CART_SERVICE_ADDR
               value: cartservice:7070
-          image: checkoutservice
+          image: ghcr.io/micheal-91/checkoutservice:sic-jss-529-gc46d98b0
           livenessProbe:
             grpc:
               port: 5050
@@ -341,7 +341,7 @@ spec:
               value: "7000"
             - name: DISABLE_PROFILER
               value: "1"
-          image: currencyservice
+          image: ghcr.io/micheal-91/currencyservice:sic-jss-529-gc46d98b0
           livenessProbe:
             grpc:
               port: 7000
@@ -415,7 +415,7 @@ spec:
               value: "8080"
             - name: DISABLE_PROFILER
               value: "1"
-          image: emailservice
+          image: ghcr.io/micheal-91/emailservice:sic-jss-529-gc46d98b0
           livenessProbe:
             grpc:
               port: 8080
@@ -508,7 +508,7 @@ spec:
               value: shoppingassistantservice:80
             - name: ENABLE_PROFILER
               value: "0"
-          image: frontend
+          image: ghcr.io/micheal-91/frontend:sic-jss-529-gc46d98b0
           livenessProbe:
             httpGet:
               httpHeaders:
@@ -615,7 +615,7 @@ spec:
               value: "10"
             - name: RATE
               value: "1"
-          image: loadgenerator
+          image: ghcr.io/micheal-91/loadgenerator:sic-jss-529-gc46d98b0
           name: main
           resources:
             limits:
@@ -697,7 +697,7 @@ spec:
               value: "50051"
             - name: DISABLE_PROFILER
               value: "1"
-          image: paymentservice
+          image: ghcr.io/micheal-91/paymentservice:sic-jss-529-gc46d98b0
           livenessProbe:
             grpc:
               port: 50051
@@ -770,7 +770,7 @@ spec:
               value: "3550"
             - name: DISABLE_PROFILER
               value: "1"
-          image: productcatalogservice
+          image: ghcr.io/micheal-91/productcatalogservice:sic-jss-529-gc46d98b0
           livenessProbe:
             grpc:
               port: 3550
@@ -845,7 +845,7 @@ spec:
               value: productcatalogservice:3550
             - name: DISABLE_PROFILER
               value: "1"
-          image: recommendationservice
+          image: ghcr.io/micheal-91/recommendationservice:sic-jss-529-gc46d98b0
           livenessProbe:
             grpc:
               port: 8080
@@ -920,7 +920,7 @@ spec:
               value: "50051"
             - name: DISABLE_PROFILER
               value: "1"
-          image: shippingservice
+          image: ghcr.io/micheal-91/shippingservice:sic-jss-529-gc46d98b0
           livenessProbe:
             grpc:
               port: 50051
